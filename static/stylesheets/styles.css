@@ -62,12 +62,10 @@ main {
 section {
   width: 50%;
   height: 100vh;
-  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
 }
 
 html, body, main {
@@ -105,24 +103,20 @@ textarea {
 }
 
 .qas {
-  padding: 2rem;
 }
 
 .qa_pairs {
-  padding-top: 4rem;
+  padding: 4rem 2rem;
+  overflow-y: scroll;
 }
 
 .qa_pair {
+  line-height: 1.4;
   font-size: 0.8rem;
-  margin-bottom: 0.8rem;
-}
-
-.qa_pair:last-of-type {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 .qa_pair__question {
   font-style: italic;
-  margin-bottom: 0.2rem;
 }
 
