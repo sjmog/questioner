@@ -104,9 +104,12 @@ textarea {
   display: inline;
 }
 
+.qas {
+  padding: 2rem;
+}
+
 .qa_pairs {
   padding-top: 4rem;
-  padding-botto: 4rem;
 }
 
 .qa_pair {
@@ -114,11 +117,12 @@ textarea {
   margin-bottom: 0.8rem;
 }
 
-.qa_pair:last-child {
-  margin-bottom: 0;
+.qa_pair:last-of-type {
+  margin-bottom: 4rem;
 }
 
 .qa_pair__question {
   font-style: italic;
   margin-bottom: 0.2rem;
 }
+
