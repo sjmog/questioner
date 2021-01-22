@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>QA Generator</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/styles.css') }}">
+</head>
+
+<body>
+  <main>
+    <section>
+      <form>
+        <label for="text">Enter some text, and I'll ask you some questions about it.</label><br />
+        <textarea id="text" name="text" placeholder="e.g. 42 is the answer to life, the universe, and everything."></textarea><br />
+
+        <input class="button" type="submit" value="Get questions" />
+        <p class="hint inline">(This can take a while.)</p>
+      </form>
+    </section>
+
+    <section>
+      {% if text %}
+        <label>You entered</label>
+        {{ text }}
+      {% endif %}
+
+      {% if qa_pairs %}
+        <div class="qa_pairs">
+          {% for qa_pair in qa_pairs %}
+            <div class="qa_pair">
+              <div class="qa_pair__question">
+                Q. {{ qa_pair["question"] }}
+              </div>
+              <div class="qa_pair__answer">
+                A. {{ qa_pair["answer"].rstrip() }}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </section>
+  </main>
+</body>
+</html>
